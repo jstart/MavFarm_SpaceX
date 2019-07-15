@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		AD0521F422DC298600B51B75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0521F322DC298600B51B75 /* AppDelegate.swift */; };
-		AD0521F622DC298600B51B75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0521F522DC298600B51B75 /* ViewController.swift */; };
-		AD0521F922DC298600B51B75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD0521F722DC298600B51B75 /* Main.storyboard */; };
+		AD0521F622DC298600B51B75 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0521F522DC298600B51B75 /* MainViewController.swift */; };
 		AD0521FB22DC298A00B51B75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD0521FA22DC298A00B51B75 /* Assets.xcassets */; };
 		AD0521FE22DC298A00B51B75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD0521FC22DC298A00B51B75 /* LaunchScreen.storyboard */; };
 		AD05220922DC298A00B51B75 /* MavFarm_SpaceXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD05220822DC298A00B51B75 /* MavFarm_SpaceXTests.swift */; };
 		AD05221422DC298B00B51B75 /* MavFarm_SpaceXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD05221322DC298B00B51B75 /* MavFarm_SpaceXUITests.swift */; };
+		AD05222322DC31D400B51B75 /* ConvenienceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD05222222DC31D400B51B75 /* ConvenienceExtensions.swift */; };
+		AD05222522DC352700B51B75 /* LaunchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD05222422DC352700B51B75 /* LaunchTableViewController.swift */; };
+		AD05222D22DC372100B51B75 /* LaunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD05222C22DC372100B51B75 /* LaunchTableViewCell.swift */; };
+		AD05223422DC397B00B51B75 /* next.json in Resources */ = {isa = PBXBuildFile; fileRef = AD05223222DC397B00B51B75 /* next.json */; };
+		AD05223522DC397B00B51B75 /* upcoming.json in Resources */ = {isa = PBXBuildFile; fileRef = AD05223322DC397B00B51B75 /* upcoming.json */; };
+		AD05223922DC39D200B51B75 /* SpaceXClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD05223822DC39D200B51B75 /* SpaceXClient.swift */; };
+		AD05223E22DC3C2000B51B75 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD05223C22DC3C2000B51B75 /* Alamofire.framework */; };
+		AD05223F22DC3C2000B51B75 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD05223D22DC3C2000B51B75 /* SnapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +43,7 @@
 /* Begin PBXFileReference section */
 		AD0521F022DC298600B51B75 /* MavFarm_SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MavFarm_SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD0521F322DC298600B51B75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD0521F522DC298600B51B75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AD0521F822DC298600B51B75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD0521F522DC298600B51B75 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AD0521FA22DC298A00B51B75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD0521FD22DC298A00B51B75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD0521FF22DC298A00B51B75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +53,14 @@
 		AD05220F22DC298B00B51B75 /* MavFarm_SpaceXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MavFarm_SpaceXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD05221322DC298B00B51B75 /* MavFarm_SpaceXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MavFarm_SpaceXUITests.swift; sourceTree = "<group>"; };
 		AD05221522DC298B00B51B75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD05222222DC31D400B51B75 /* ConvenienceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenienceExtensions.swift; sourceTree = "<group>"; };
+		AD05222422DC352700B51B75 /* LaunchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTableViewController.swift; sourceTree = "<group>"; };
+		AD05222C22DC372100B51B75 /* LaunchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTableViewCell.swift; sourceTree = "<group>"; };
+		AD05223222DC397B00B51B75 /* next.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = next.json; sourceTree = "<group>"; };
+		AD05223322DC397B00B51B75 /* upcoming.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = upcoming.json; sourceTree = "<group>"; };
+		AD05223822DC39D200B51B75 /* SpaceXClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXClient.swift; sourceTree = "<group>"; };
+		AD05223C22DC3C2000B51B75 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
+		AD05223D22DC3C2000B51B75 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD05223E22DC3C2000B51B75 /* Alamofire.framework in Frameworks */,
+				AD05223F22DC3C2000B51B75 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,8 +114,11 @@
 			isa = PBXGroup;
 			children = (
 				AD0521F322DC298600B51B75 /* AppDelegate.swift */,
-				AD0521F522DC298600B51B75 /* ViewController.swift */,
-				AD0521F722DC298600B51B75 /* Main.storyboard */,
+				AD05222922DC36DE00B51B75 /* Network */,
+				AD05222722DC368000B51B75 /* ViewControllers */,
+				AD05222B22DC370A00B51B75 /* Cells */,
+				AD05222122DC31B100B51B75 /* Extensions */,
+				AD05223B22DC3C0700B51B75 /* Frameworks */,
 				AD0521FA22DC298A00B51B75 /* Assets.xcassets */,
 				AD0521FC22DC298A00B51B75 /* LaunchScreen.storyboard */,
 				AD0521FF22DC298A00B51B75 /* Info.plist */,
@@ -110,6 +129,7 @@
 		AD05220722DC298A00B51B75 /* MavFarm_SpaceXTests */ = {
 			isa = PBXGroup;
 			children = (
+				AD05223722DC398600B51B75 /* Sample Data */,
 				AD05220822DC298A00B51B75 /* MavFarm_SpaceXTests.swift */,
 				AD05220A22DC298A00B51B75 /* Info.plist */,
 			);
@@ -125,6 +145,57 @@
 			path = MavFarm_SpaceXUITests;
 			sourceTree = "<group>";
 		};
+		AD05222122DC31B100B51B75 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AD05222222DC31D400B51B75 /* ConvenienceExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AD05222722DC368000B51B75 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD0521F522DC298600B51B75 /* MainViewController.swift */,
+				AD05222422DC352700B51B75 /* LaunchTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AD05222922DC36DE00B51B75 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AD05223822DC39D200B51B75 /* SpaceXClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AD05222B22DC370A00B51B75 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AD05222C22DC372100B51B75 /* LaunchTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AD05223722DC398600B51B75 /* Sample Data */ = {
+			isa = PBXGroup;
+			children = (
+				AD05223222DC397B00B51B75 /* next.json */,
+				AD05223322DC397B00B51B75 /* upcoming.json */,
+			);
+			path = "Sample Data";
+			sourceTree = "<group>";
+		};
+		AD05223B22DC3C0700B51B75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD05223C22DC3C2000B51B75 /* Alamofire.framework */,
+				AD05223D22DC3C2000B51B75 /* SnapKit.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +206,7 @@
 				AD0521EC22DC298600B51B75 /* Sources */,
 				AD0521ED22DC298600B51B75 /* Frameworks */,
 				AD0521EE22DC298600B51B75 /* Resources */,
+				AD05224122DC3C4600B51B75 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -231,7 +303,6 @@
 			files = (
 				AD0521FE22DC298A00B51B75 /* LaunchScreen.storyboard in Resources */,
 				AD0521FB22DC298A00B51B75 /* Assets.xcassets in Resources */,
-				AD0521F922DC298600B51B75 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +310,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD05223422DC397B00B51B75 /* next.json in Resources */,
+				AD05223522DC397B00B51B75 /* upcoming.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,12 +324,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AD05224122DC3C4600B51B75 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework\n",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Snapkit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AD0521EC22DC298600B51B75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD0521F622DC298600B51B75 /* ViewController.swift in Sources */,
+				AD05222522DC352700B51B75 /* LaunchTableViewController.swift in Sources */,
+				AD05222D22DC372100B51B75 /* LaunchTableViewCell.swift in Sources */,
+				AD05222322DC31D400B51B75 /* ConvenienceExtensions.swift in Sources */,
+				AD0521F622DC298600B51B75 /* MainViewController.swift in Sources */,
+				AD05223922DC39D200B51B75 /* SpaceXClient.swift in Sources */,
 				AD0521F422DC298600B51B75 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,14 +394,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AD0521F722DC298600B51B75 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD0521F822DC298600B51B75 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AD0521FC22DC298A00B51B75 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -434,6 +527,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P284QZ7XV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MavFarm_SpaceX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +549,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P284QZ7XV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MavFarm_SpaceX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
