@@ -19,15 +19,51 @@ struct Launch: Decodable {
 }
 
 enum ClientError: Error {
-    case generic
+    case decodeFailure
 }
 
 struct SpaceXClient {
+    
+    static let base = "https://api.spacexdata.com/v3/launches/"
+    static let next = "next", upcoming = "upcoming"
+    static let decoder = JSONDecoder()
+
     static func fetchUpcomingLaunches(completion: @escaping LaunchListHandler) {
-        completion(.failure(ClientError.generic))
+        fetch(urlString: base + upcoming, completion: { response in
+            switch response.result {
+            case .success(let data):
+                guard let upcoming = try? decoder.decode([Launch].self, from: data) else {
+                    completion(.failure(ClientError.decodeFailure))
+                    return
+                }
+
+                completion(.success(upcoming))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        })
     }
     
     static func fetchNextLaunch(completion: @escaping LaunchHandler) {
-        completion(.failure(ClientError.generic))
+        fetch(urlString: base + next, completion: { response in
+            switch response.result {
+            case .success(let data):
+                guard let next = try? decoder.decode(Launch.self, from: data) else {
+                    completion(.failure(ClientError.decodeFailure))
+                    return
+                }
+                
+                completion(.success(next))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        })
+    }
+    
+    fileprivate static func fetch(urlString: String, completion: @escaping (Alamofire.DataResponse<Data>) -> Void) {
+        Alamofire.request(urlString)
+            .validate(statusCode: 200..<300)
+            .validate(contentType: ["application/json"])
+            .responseData(completionHandler: completion)
     }
 }

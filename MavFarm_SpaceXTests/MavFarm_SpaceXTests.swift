@@ -57,7 +57,7 @@ class MavFarm_SpaceXTests: XCTestCase {
         })
     
         waitForExpectations(timeout: 5, handler: nil)
-        XCTAssertEqual(launches?.count, 0)
+        XCTAssertEqual(launches?.count, 22)
     }
 
     func testFetchNextLaunch() {
