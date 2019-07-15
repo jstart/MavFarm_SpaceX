@@ -24,6 +24,7 @@
 		AD05224622DD187B00B51B75 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD05223C22DC3C2000B51B75 /* Alamofire.framework */; };
 		AD05224722DD187B00B51B75 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD05223D22DC3C2000B51B75 /* SnapKit.framework */; };
 		AD05224A22DD1FE200B51B75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD05224C22DD1FE200B51B75 /* Localizable.strings */; };
+		AD05225122DD316D00B51B75 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD05225022DD316D00B51B75 /* CountdownView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		AD05223C22DC3C2000B51B75 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		AD05223D22DC3C2000B51B75 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
 		AD05224B22DD1FE200B51B75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AD05225022DD316D00B51B75 /* CountdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				AD0521F322DC298600B51B75 /* AppDelegate.swift */,
+				AD05224F22DD30F400B51B75 /* Custom Views */,
 				AD05222922DC36DE00B51B75 /* Network */,
 				AD05222722DC368000B51B75 /* ViewControllers */,
 				AD05222B22DC370A00B51B75 /* Cells */,
@@ -201,6 +204,14 @@
 				AD05223D22DC3C2000B51B75 /* SnapKit.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD05224F22DD30F400B51B75 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD05225022DD316D00B51B75 /* CountdownView.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +374,7 @@
 			files = (
 				AD05222522DC352700B51B75 /* LaunchTableViewController.swift in Sources */,
 				AD05222D22DC372100B51B75 /* LaunchTableViewCell.swift in Sources */,
+				AD05225122DD316D00B51B75 /* CountdownView.swift in Sources */,
 				AD05222322DC31D400B51B75 /* ConvenienceExtensions.swift in Sources */,
 				AD0521F622DC298600B51B75 /* MainViewController.swift in Sources */,
 				AD05223922DC39D200B51B75 /* SpaceXClient.swift in Sources */,
