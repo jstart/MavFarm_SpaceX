@@ -7,12 +7,53 @@
 //
 
 import UIKit
+import SnapKit
 
 class MainViewController: UIViewController {
 
+    let countdownView = UIView()
+    var launch: Launch?
+    
+    let launchTableVC = LaunchTableViewController(style: .plain)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+
+        title = NSLocalizedString("HomeTitle", comment: "title for home screen")
+        
+        countdownView.backgroundColor = .gray
+        view.addSubview(countdownView)
+        
+        addChild(launchTableVC)
+        view.addSubview(launchTableVC.view)
+        launchTableVC.didMove(toParent: self)
+        
+        countdownView.snp.makeConstraints { (make) -> Void in
+            make.height.equalTo(100)
+            make.width.equalTo(view)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+        }
+        
+        launchTableVC.view.snp.makeConstraints { (make) -> Void in
+            make.bottom.equalTo(view)
+            make.left.equalTo(view)
+            make.width.equalTo(view)
+            make.top.equalTo(countdownView.snp.bottom)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        SpaceXClient.fetchNextLaunch(completion: { [weak self] result in
+            switch result {
+            case .success(let launch):
+                self?.launch = launch
+
+            case .failure(let error):
+                let alert = UIAlertController.alert(title: "Error", message: error.localizedDescription)
+                self?.present(alert, animated: true)
+            }
+        })
     }
 
 }

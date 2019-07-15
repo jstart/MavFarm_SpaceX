@@ -15,10 +15,8 @@ class MavFarm_SpaceXUITests: XCTestCase {
         XCUIApplication().launch()
     }
 
-    override func tearDown() {
-    }
-
     func testLaunch() {
+        XCUIApplication().tables.firstMatch.swipeDown()
     }
 
 }

@@ -11,6 +11,10 @@ import XCTest
 
 class MavFarm_SpaceXTests: XCTestCase {
     let decoder = JSONDecoder()
+    
+    override func setUp() {
+        decoder.dateDecodingStrategy = .iso8601
+    }
 
     func testDecodeLaunches() {
         guard let pathString = Bundle(for: type(of: self)).path(forResource: "upcoming", ofType: "json") else {
@@ -35,7 +39,6 @@ class MavFarm_SpaceXTests: XCTestCase {
         do {
             let next = try decoder.decode(Launch.self, from: data)
             XCTAssertNotNil(next)
-            XCTAssertEqual(next.flight_number, 82)
         } catch {
             print(error)
             XCTFail()
@@ -55,7 +58,7 @@ class MavFarm_SpaceXTests: XCTestCase {
             }
             expectation.fulfill()
         })
-    
+
         waitForExpectations(timeout: 5, handler: nil)
         XCTAssertEqual(launches?.count, 22)
     }
@@ -63,7 +66,7 @@ class MavFarm_SpaceXTests: XCTestCase {
     func testFetchNextLaunch() {
         var launch: Launch?
         let expectation = self.expectation(description: "Fetch next launch")
-        
+
         SpaceXClient.fetchNextLaunch(completion: { result in
             switch result {
             case .success(let value):
@@ -73,7 +76,7 @@ class MavFarm_SpaceXTests: XCTestCase {
             }
             expectation.fulfill()
         })
-        
+
         waitForExpectations(timeout: 5, handler: nil)
         XCTAssertNotNil(launch)
     }
